@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.lynda.samoca "
+    id          = "asd"
     versionCode = "1" 
     version     = "1.0.0" >
-   <name>SAMOCA</name>
+   <name></name>
     <description>
-            A mobile guide to the SAMOCA. 
+            A mobile 
     </description>
-    <author href="https://samoca.org" email="support@samoca.org ">
-             Chris Griffith 
+    <author href="" email="">
+           
     </author>
     
     <platform name="ios"/>
@@ -81,17 +81,5 @@
         <allow-intent href="itms:*"/>
         <allow-intent href="itms-apps:*"/>
       </platform>
-
-<platform name="android">
-      <feature name="Geolocation">
-          <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
-      </feature>
-</platform>
-
-<platform name="ios">
-      <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation" />
-      </feature>
-</platform>
       
 </widget>
