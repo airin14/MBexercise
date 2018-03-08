@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "asd"
+    id          = "com.mb.exercise "
     versionCode = "1" 
     version     = "1.0.0" >
    <name></name>
     <description>
-            A mobile 
+            Applicaciòn test
     </description>
-    <author href="" email="">
-           
+    <author href="mbexcercise.com.ar" email="mb@exercise.com.ar">
+           Airin Grillo
     </author>
     
     <platform name="ios"/>
@@ -65,7 +65,7 @@
       
 
       
-      <preference name="permissions" value="none"/>
+      <preference name="permissions" value="default"/>
       <access origin="*" subdomains="true"/>
       
       <allow-intent href="http://*/*"/>
