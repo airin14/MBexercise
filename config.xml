@@ -82,13 +82,16 @@
         <allow-intent href="itms-apps:*"/>
       </platform>
 
+<platform name="android">
       <feature name="Geolocation">
           <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
       </feature>
+</platform>
 
+<platform name="ios">
       <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
       </feature>
-
+</platform>
       
 </widget>
