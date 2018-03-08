@@ -63,6 +63,34 @@
   <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
   <link href="css/all-themes.css" rel="stylesheet">
 
+  <script>
+            window.onload = function()
+            {
+                document.addEventListener("deviceready", init, false);
+            }
+            function init()
+            {
+                document.getElementById("btnSave").addEventListener("click",saveData, false);
+                document.getElementById("btnGet").addEventListener("click", getData, false);
+            }
+            function saveData()
+            {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                window.localStorage.setItem("uname", username);
+                window.localStorage.setItem("pass", password);
+                alert("Your data is stored successfuly");
+            }
+            function getData()
+            {
+                var output = "Your user name is " +
+                              window.localStorage.getItem("uname") +
+                              " and your password is " +
+                              window.localStorage.getItem("pass");
+                document.getElementById("result").innerHTML = output;
+            }
+        </script>
+
 </head>
 
 <!-- <body>
@@ -1055,29 +1083,11 @@
     </section>
 
     <div>
-      <input type="text" name="username" id="username"/>
-      <button id="save">Save</button>
-      <button id="load">Load</button>
-      <button id="clear">Clear</button>
-       
-      <script type="text/javascript">
-      $(function() {
-         // Save input value to localStorage
-         $('#save').on('click', function() {
-            var username = $('#username').val();
-            localStorage.setItem("username", username);
-         });
-         // Load input value from localStorage
-         $('#load').on('click', function() {
-            var username = localStorage.getItem('username') || '<empty>';
-            $('#username').val(username);
-         });
-         // Clear localStorage
-         $('#clear').on('click', function() {
-            localStorage.clear();
-         });
-      });
-</script>
+      User Name:<input type="text" id="username" /><br />
+        Password: <input type="text" id="password" /><br />
+        <button id="btnSave">Save Data</button><br />
+        <button id="btnGet">Get Data</button><br />
+        <div id="result"></div>
     </div>
 
   </section>
